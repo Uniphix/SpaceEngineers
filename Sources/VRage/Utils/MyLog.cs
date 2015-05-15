@@ -354,12 +354,14 @@ namespace VRage.Utils
 
         public void WriteLineAndConsole(string msg)
         {
-            WriteLine(msg);
+            UTF8Encoding utf8 = new UTF8Encoding();
+            string umsg = utf8.GetString(Encoding.UTF8.GetBytes(msg));
+            WriteLine(umsg);
 
             m_consoleStringBuilder.Clear();
             AppendDateAndTime(m_consoleStringBuilder);
             m_consoleStringBuilder.Append(": ");
-            m_consoleStringBuilder.Append(msg);
+            m_consoleStringBuilder.Append(umsg);
             Console.WriteLine(m_consoleStringBuilder.ToString());
         }
 
