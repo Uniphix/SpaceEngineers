@@ -5,7 +5,10 @@ using System.Text;
 
 namespace Sandbox.ModAPI.Ingame
 {
-    public interface IMyOxygenGenerator : IMyFunctionalBlock
+    /// <summary>
+    /// Oxygen generator interface
+    /// </summary>
+    public interface IMyOxygenGenerator : IMyFunctionalBlock, IMyPowerConsumerBlock
     {
     }
 }

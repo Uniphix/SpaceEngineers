@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Sandbox.ModAPI.Ingame
 {
-    public interface IMyMotorBase : IMyFunctionalBlock
+    public interface IMyMotorBase : IMyFunctionalBlock, IMyPowerConsumerBlock
     {
     }
 }

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Sandbox.ModAPI.Ingame
 {
-    public interface IMyPistonBase : IMyFunctionalBlock
+    public interface IMyPistonBase : IMyFunctionalBlock, IMyPowerConsumerBlock
     {
         /// <summary>
         /// Param - limit is top

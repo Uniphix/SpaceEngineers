@@ -5,8 +5,15 @@ using System.Text;
 
 namespace Sandbox.ModAPI.Ingame
 {
-    public interface IMyOxygenTank : IMyFunctionalBlock
+    /// <summary>
+    /// Oxygen tank interface
+    /// </summary>
+    public interface IMyOxygenTank : IMyFunctionalBlock, IMyPowerConsumerBlock
     {
+        /// <summary>
+        /// Oxygen level
+        /// </summary>
+        /// <returns>oxygen level as decimals (1 = 100%)</returns>
         float GetOxygenLevel();
     }
 }

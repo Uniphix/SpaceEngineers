@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Sandbox.ModAPI.Ingame
 {
-    public interface IMyGravityGeneratorBase : IMyFunctionalBlock
+    public interface IMyGravityGeneratorBase : IMyFunctionalBlock, IMyPowerConsumerBlock
     {
     }
 }

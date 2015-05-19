@@ -6,13 +6,13 @@ using System.Text;
 namespace Sandbox.ModAPI.Ingame
 {
     /// <summary>
-    /// Base thruster interface
+    /// Virtual mass base (common for artificial mass and spaceball)
     /// </summary>
-    public interface IMyThrust: IMyFunctionalBlock, IMyPowerConsumerBlock
+    public interface IMyVirtualMassBase : IMyFunctionalBlock
     {
         /// <summary>
-        /// Thrust override value
+        /// Virtualmass weight
         /// </summary>
-        float ThrustOverride { get;}
+        float VirtualMass { get; }
     }
 }

@@ -8,7 +8,7 @@ namespace Sandbox.ModAPI.Ingame
     /// <summary>
     /// AirVent block for pressurizing and depresurizing rooms
     /// </summary>
-    public interface IMyAirVent : IMyFunctionalBlock
+    public interface IMyAirVent : IMyFunctionalBlock, IMyPowerConsumerBlock
     {
         /// <summary>
         /// Room can be pressurized

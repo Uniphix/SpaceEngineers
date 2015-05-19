@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Sandbox.ModAPI.Ingame
 {
-    public interface IMySensorBlock : IMyFunctionalBlock
+    public interface IMySensorBlock : IMyFunctionalBlock, IMyPowerConsumerBlock
     {
         /// <summary>
         /// Param - active

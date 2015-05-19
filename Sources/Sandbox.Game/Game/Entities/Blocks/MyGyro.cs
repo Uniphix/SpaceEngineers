@@ -292,6 +292,32 @@ namespace Sandbox.Game.Entities
                 UpdateText();
             }
         }
+
+        #region PowerReceiver
+        public GameSystems.Electricity.MyPowerReceiver PowerReceiver
+        {
+            get { return CubeGrid.GridSystems.GyroSystem.PowerReceiver;  }
+        }
+
+        float ModAPI.Ingame.IMyPowerConsumerBlock.CurrentInput
+        { get { return PowerReceiver == null ? 0 : PowerReceiver.SuppliedRatio * RequiredPowerInput; } }
+
+        bool ModAPI.Ingame.IMyPowerConsumerBlock.IsAdaptible
+        { get { return PowerReceiver == null ? false : PowerReceiver.IsAdaptible; } }
+
+        bool ModAPI.Ingame.IMyPowerConsumerBlock.IsPowered
+        { get { return PowerReceiver == null ? false : PowerReceiver.IsPowered; } }
+
+        bool ModAPI.Ingame.IMyPowerConsumerBlock.IsPowerNeeded
+        { get { return PowerReceiver == null ? false : true; } }
+
+        /// FIX REQUIRED - Gyro does not have separate power source, all gyros share power from gyrosystem - reported value is invalid
+        float ModAPI.Ingame.IMyPowerConsumerBlock.MaxRequiredInput
+        { get { return RequiredPowerInput; } }
+
+        float ModAPI.Ingame.IMyPowerConsumerBlock.RequiredInput
+        { get { return RequiredPowerInput; } }
+        #endregion
     }
 }
 

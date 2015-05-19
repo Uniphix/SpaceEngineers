@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Sandbox.ModAPI.Ingame
 {
-    public interface IMyDoor : IMyFunctionalBlock
+    public interface IMyDoor : IMyFunctionalBlock, IMyPowerConsumerBlock
     {
         /// <summary>
         /// Indicates whether door is opened or closed. True when door is opened.

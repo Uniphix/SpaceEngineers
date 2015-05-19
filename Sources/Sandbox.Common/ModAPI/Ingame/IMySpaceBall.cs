@@ -8,7 +8,7 @@ namespace Sandbox.ModAPI.Ingame
     /// <summary>
     /// Spaceball interface
     /// </summary>
-    public interface IMySpaceBall : IMyVirtualMass
+    public interface IMySpaceBall : IMyVirtualMassBase
     {
         /// <summary>
         /// Ball friction

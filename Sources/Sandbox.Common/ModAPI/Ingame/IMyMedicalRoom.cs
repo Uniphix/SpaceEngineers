@@ -5,7 +5,10 @@ using System.Text;
 
 namespace Sandbox.ModAPI.Ingame
 {
-    public interface IMyMedicalRoom : IMyFunctionalBlock
+    /// <summary>
+    /// Medical station interface
+    /// </summary>
+    public interface IMyMedicalRoom : IMyFunctionalBlock, IMyPowerConsumerBlock
     {
     }
 }

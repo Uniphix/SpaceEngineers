@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Sandbox.ModAPI.Ingame
 {
-    public interface IMyButtonPanel : IMyTerminalBlock
+    public interface IMyButtonPanel : IMyFunctionalBlock, IMyPowerConsumerBlock
     {
         bool AnyoneCanUse
         {

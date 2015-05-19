@@ -21,7 +21,7 @@ using VRageMath;
 
 namespace Sandbox.Game.Entities.Cube
 {
-    abstract class MyMotorBase : MyFunctionalBlock, IMyPowerConsumer
+    abstract class MyMotorBase : MyFunctionalBlock, IMyPowerConsumer, ModAPI.Ingame.IMyPowerConsumerBlock
     {
         private static List<HkRigidBody> m_penetrations = new List<HkRigidBody>();
         private const string ROTOR_DUMMY_KEY = "electric_motor";
@@ -103,11 +103,31 @@ namespace Sandbox.Game.Entities.Cube
             get { return MotorDefinition.RequiredPowerInput; }
         }
 
+        #region PowerReceiver
         public MyPowerReceiver PowerReceiver
         {
             get;
-            private set;
+            protected set;
         }
+
+        float ModAPI.Ingame.IMyPowerConsumerBlock.CurrentInput
+        { get { return PowerReceiver == null ? 0 : PowerReceiver.CurrentInput; } }
+
+        bool ModAPI.Ingame.IMyPowerConsumerBlock.IsAdaptible
+        { get { return PowerReceiver == null ? false : PowerReceiver.IsAdaptible; } }
+
+        bool ModAPI.Ingame.IMyPowerConsumerBlock.IsPowered
+        { get { return PowerReceiver == null ? false : PowerReceiver.IsPowered; } }
+
+        bool ModAPI.Ingame.IMyPowerConsumerBlock.IsPowerNeeded
+        { get { return PowerReceiver == null ? false : true; } }
+
+        float ModAPI.Ingame.IMyPowerConsumerBlock.MaxRequiredInput
+        { get { return PowerReceiver == null ? 0 : PowerReceiver.MaxRequiredInput; } }
+
+        float ModAPI.Ingame.IMyPowerConsumerBlock.RequiredInput
+        { get { return PowerReceiver == null ? 0 : PowerReceiver.RequiredInput; } }
+        #endregion
 
         public new MySyncMotorBase SyncObject { get { return (MySyncMotorBase)base.SyncObject; } }
 

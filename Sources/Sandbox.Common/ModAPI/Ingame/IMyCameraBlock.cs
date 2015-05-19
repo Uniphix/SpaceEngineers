@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Sandbox.ModAPI.Ingame
 {
-    public interface IMyCameraBlock:IMyFunctionalBlock
+    public interface IMyCameraBlock : IMyFunctionalBlock, IMyPowerConsumerBlock
     {
     }
 }

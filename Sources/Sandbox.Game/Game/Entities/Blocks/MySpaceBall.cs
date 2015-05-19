@@ -337,7 +337,7 @@ namespace Sandbox.Game.Entities
             return VirtualMass > 0 ? VirtualMass : REAL_MINIMUM_MASS;
         }
 
-        float IMyVirtualMass.VirtualMass
+        float IMyVirtualMassBase.VirtualMass
         {
             get { return GetMass(); }
         }

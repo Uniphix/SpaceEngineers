@@ -6,8 +6,14 @@ using System.Text;
 
 namespace Sandbox.ModAPI.Ingame
 {
-    public interface IMyOxygenFarm : IMyTerminalBlock
+    /// <summary>
+    /// Oxygen farm interface
+    /// </summary>
+    public interface IMyOxygenFarm : IMyFunctionalBlock, IMyPowerConsumerBlock
     {
+        /// <summary>
+        /// Farm output in oxygen units per second - 1 astronaut consume 1 unit per second
+        /// </summary>
         float GetOutput();
     }
 }

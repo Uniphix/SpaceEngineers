@@ -9,7 +9,7 @@ namespace Sandbox.ModAPI.Ingame
     /// <summary>
     /// Laser antenna block interface
     /// </summary>
-    public interface IMyLaserAntenna : IMyFunctionalBlock
+    public interface IMyLaserAntenna : IMyFunctionalBlock, IMyPowerConsumerBlock
     {
         /// <summary>
         /// get target coordinates

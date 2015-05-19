@@ -26,7 +26,7 @@ using VRageMath;
 namespace Sandbox.Game.Entities.Blocks
 {
     [MyCubeBlockType(typeof(MyObjectBuilder_ButtonPanel))]
-    internal class MyButtonPanel : MyTerminalBlock, IMyPowerConsumer, Sandbox.ModAPI.IMyButtonPanel
+    internal class MyButtonPanel : MyFunctionalBlock, IMyPowerConsumer, Sandbox.ModAPI.IMyButtonPanel
     {
         [PreloadRequired]
         class MySyncButtonPanel : MySyncEntity
@@ -447,11 +447,31 @@ namespace Sandbox.Game.Entities.Blocks
             return ob;
         }
 
+        #region PowerReceiver
         public MyPowerReceiver PowerReceiver
         {
             get;
-            private set;
+            protected set;
         }
+
+        float ModAPI.Ingame.IMyPowerConsumerBlock.CurrentInput
+        { get { return PowerReceiver == null ? 0 : PowerReceiver.CurrentInput; } }
+
+        bool ModAPI.Ingame.IMyPowerConsumerBlock.IsAdaptible
+        { get { return PowerReceiver == null ? false : PowerReceiver.IsAdaptible; } }
+
+        bool ModAPI.Ingame.IMyPowerConsumerBlock.IsPowered
+        { get { return PowerReceiver == null ? false : PowerReceiver.IsPowered; } }
+
+        bool ModAPI.Ingame.IMyPowerConsumerBlock.IsPowerNeeded
+        { get { return PowerReceiver == null ? false : true; } }
+
+        float ModAPI.Ingame.IMyPowerConsumerBlock.MaxRequiredInput
+        { get { return PowerReceiver == null ? 0 : PowerReceiver.MaxRequiredInput; } }
+
+        float ModAPI.Ingame.IMyPowerConsumerBlock.RequiredInput
+        { get { return PowerReceiver == null ? 0 : PowerReceiver.RequiredInput; } }
+        #endregion
 
         public void PressButton(int i)
         {

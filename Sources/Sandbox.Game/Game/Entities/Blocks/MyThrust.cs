@@ -559,6 +559,29 @@ namespace Sandbox.Game.Entities
                 UpdateDetailedInfo();
             }
         }
+
+        #region PowerReceiver
+        public MyPowerReceiver PowerReceiver
+        { get { return CubeGrid.GridSystems.ThrustSystem.PowerReceiver; } }
+
+        float ModAPI.Ingame.IMyPowerConsumerBlock.CurrentInput
+        { get { return PowerReceiver == null ? 0 : PowerReceiver.SuppliedRatio * MaxPowerConsumption; } }
+
+        bool ModAPI.Ingame.IMyPowerConsumerBlock.IsAdaptible
+        { get { return PowerReceiver == null ? false : PowerReceiver.IsAdaptible; } }
+
+        bool ModAPI.Ingame.IMyPowerConsumerBlock.IsPowered
+        { get { return PowerReceiver == null ? false : PowerReceiver.IsPowered; } }
+
+        bool ModAPI.Ingame.IMyPowerConsumerBlock.IsPowerNeeded
+        { get { return PowerReceiver == null ? false : true; } }
+
+        float ModAPI.Ingame.IMyPowerConsumerBlock.MaxRequiredInput
+        { get { return MaxPowerConsumption; } }
+
+        float ModAPI.Ingame.IMyPowerConsumerBlock.RequiredInput
+        { get { return MinPowerConsumption; } }
+        #endregion
     }
-}
+    }
 

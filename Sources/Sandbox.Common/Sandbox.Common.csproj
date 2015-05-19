@@ -235,6 +235,7 @@
     <Compile Include="ModAPI\Ingame\IMyUserControllableGun.cs" />
     <Compile Include="ModAPI\Ingame\IMyVirtualMass.cs" />
     <Compile Include="ModAPI\Ingame\IMyControlPanel.cs" />
+    <Compile Include="ModAPI\Ingame\IMyVirtualMassBase.cs" />
     <Compile Include="ModAPI\Ingame\IMyWarhead.cs" />
     <Compile Include="ModAPI\IMyButtonPanel.cs" />
     <Compile Include="ModAPI\IMyShipMergeBlock.cs" />

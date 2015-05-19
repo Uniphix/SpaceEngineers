@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Sandbox.ModAPI.Ingame
 {
-    public interface IMyShipController : IMyTerminalBlock
+    public interface IMyShipController : IMyFunctionalBlock
     {
         /// <summary>
         /// Indicates whether a block is locally or remotely controlled.

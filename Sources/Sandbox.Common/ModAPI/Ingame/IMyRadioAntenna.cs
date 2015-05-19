@@ -8,7 +8,7 @@ namespace Sandbox.ModAPI.Ingame
     /// <summary>
     /// Antenna block interface
     /// </summary>
-    public interface IMyRadioAntenna : IMyFunctionalBlock
+    public interface IMyRadioAntenna : IMyFunctionalBlock, IMyPowerConsumerBlock
     {
         /// <summary>
         /// Broadcasting/Receiving range (read-only)

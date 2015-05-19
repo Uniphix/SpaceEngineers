@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Sandbox.ModAPI.Ingame
 {
-    public interface IMyProductionBlock:IMyFunctionalBlock
+    public interface IMyProductionBlock : IMyFunctionalBlock, IMyPowerConsumerBlock
     {
         bool IsProducing { get; }
         //bool CanUseBlueprint(Sandbox.Definitions.MyBlueprintDefinition blueprint);

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Sandbox.ModAPI.Ingame
 {
-    public interface IMySmallGatlingGun : IMyUserControllableGun
+    public interface IMySmallGatlingGun : IMyUserControllableGun, IMyPowerConsumerBlock
     {
         bool UseConveyorSystem { get; }
     }

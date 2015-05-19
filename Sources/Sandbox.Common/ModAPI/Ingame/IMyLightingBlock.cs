@@ -5,7 +5,10 @@ using System.Text;
 
 namespace Sandbox.ModAPI.Ingame
 {
-    public interface IMyLightingBlock : IMyFunctionalBlock
+    /// <summary>
+    /// Base light interface
+    /// </summary>
+    public interface IMyLightingBlock : IMyFunctionalBlock, IMyPowerConsumerBlock
     {
         float Radius{ get;}
         float Intensity{get;}

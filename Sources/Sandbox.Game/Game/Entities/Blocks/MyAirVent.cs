@@ -61,11 +61,31 @@ namespace Sandbox.Game.Entities.Blocks
             }
         }
 
+        #region PowerReceiver
         public MyPowerReceiver PowerReceiver
         {
             get;
             protected set;
         }
+
+        float IMyPowerConsumerBlock.CurrentInput
+        { get { return PowerReceiver == null ? 0 : PowerReceiver.CurrentInput; } }
+
+        bool IMyPowerConsumerBlock.IsAdaptible
+        { get { return PowerReceiver == null ? false : PowerReceiver.IsAdaptible; } }
+
+        bool IMyPowerConsumerBlock.IsPowered
+        { get { return PowerReceiver == null ? false : PowerReceiver.IsPowered; } }
+
+        bool IMyPowerConsumerBlock.IsPowerNeeded
+        { get { return PowerReceiver == null ? false : true; } }
+
+        float IMyPowerConsumerBlock.MaxRequiredInput
+        { get { return PowerReceiver == null ? 0 : PowerReceiver.MaxRequiredInput; } }
+
+        float IMyPowerConsumerBlock.RequiredInput
+        { get { return PowerReceiver == null ? 0 : PowerReceiver.RequiredInput; } }
+        #endregion
 
         private MyMultilineConveyorEndpoint m_conveyorEndpoint;
         public IMyConveyorEndpoint ConveyorEndpoint

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Sandbox.ModAPI.Ingame
 {
-    public interface IMyOreDetector : IMyFunctionalBlock
+    public interface IMyOreDetector : IMyFunctionalBlock, IMyPowerConsumerBlock
     {
         float Range {get;}
         bool BroadcastUsingAntennas {get;}

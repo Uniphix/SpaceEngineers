@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Sandbox.ModAPI.Ingame
 {
-    public interface IMyShipDrill : IMyFunctionalBlock
+    public interface IMyShipDrill : IMyFunctionalBlock, IMyPowerConsumerBlock
     {
         bool UseConveyorSystem { get; }
     }

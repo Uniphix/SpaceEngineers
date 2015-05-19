@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Sandbox.ModAPI.Ingame
 {
-    public interface IMyGyro : IMyFunctionalBlock
+    public interface IMyGyro : IMyFunctionalBlock, IMyPowerConsumerBlock
     {
         float GyroPower { get; }
         bool GyroOverride { get; }
