@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Sandbox.ModAPI.Ingame
 {
-    public interface IMyOxygenFarm : IMyTerminalBlock
+    public interface IMyOxygenFarm : IMyFunctionalBlock
     {
         float GetOutput();
     }

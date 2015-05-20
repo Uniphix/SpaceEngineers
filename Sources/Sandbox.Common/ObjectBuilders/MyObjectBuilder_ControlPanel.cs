@@ -8,7 +8,7 @@ namespace Sandbox.Common.ObjectBuilders
 {
     [ProtoContract]
     [MyObjectBuilderDefinition]
-    public class MyObjectBuilder_ControlPanel : MyObjectBuilder_TerminalBlock
+    public class MyObjectBuilder_ControlPanel : MyObjectBuilder_FunctionalBlock
     {
     }
 }

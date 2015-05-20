@@ -36,7 +36,7 @@ using Sandbox.Game.Localization;
 namespace Sandbox.Game.Entities.Cube
 {
     [MyCubeBlockType(typeof(MyObjectBuilder_Warhead))]
-    class MyWarhead : MyTerminalBlock, IMyDestroyableObject, IMyWarhead
+    class MyWarhead : MyFunctionalBlock, IMyDestroyableObject, IMyWarhead
     {
         const float m_maxExplosionRadius = 30.0f;
         public static float ExplosionImpulse = 30000;

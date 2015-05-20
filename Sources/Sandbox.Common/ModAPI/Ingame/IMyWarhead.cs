@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Sandbox.ModAPI.Ingame
 {
-    public interface IMyWarhead: IMyTerminalBlock
+    public interface IMyWarhead: IMyFunctionalBlock
     {
         bool IsCountingDown { get; }
         float DetonationTime { get; }

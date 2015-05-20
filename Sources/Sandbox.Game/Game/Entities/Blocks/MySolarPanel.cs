@@ -21,7 +21,7 @@ using VRage.Utils;
 namespace Sandbox.Game.Entities.Blocks
 {
     [MyCubeBlockType(typeof(MyObjectBuilder_SolarPanel))]
-    class MySolarPanel : MyTerminalBlock, IMyPowerProducer, Sandbox.ModAPI.Ingame.IMySolarPanel
+    class MySolarPanel : MyFunctionalBlock, IMyPowerProducer, Sandbox.ModAPI.Ingame.IMySolarPanel
     {
         static string[] m_emissiveNames = new string[] { "Emissive0", "Emissive1", "Emissive2", "Emissive3" };
 

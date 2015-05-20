@@ -9,7 +9,7 @@ namespace Sandbox.Common.ObjectBuilders
 {
     [ProtoContract]
     [MyObjectBuilderDefinition]
-    public class MyObjectBuilder_Warhead : MyObjectBuilder_TerminalBlock
+    public class MyObjectBuilder_Warhead : MyObjectBuilder_FunctionalBlock
     {
         [ProtoMember]
         public int CountdownMs = 10000;
