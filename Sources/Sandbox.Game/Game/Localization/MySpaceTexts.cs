@@ -7735,6 +7735,11 @@ namespace Sandbox.Game.Localization
         public static readonly MyStringId DisplayName_Block_ControlPanel = MyStringId.GetOrCompute("DisplayName_Block_ControlPanel");
 
         ///<summary>
+        ///Control Panel with On/Off
+        ///</summary>
+        public static readonly MyStringId DisplayName_Block_ControlPanel_Toggle = MyStringId.GetOrCompute("DisplayName_Block_ControlPanel_Toggle");
+
+        ///<summary>
         ///Steel Catwalk Corner
         ///</summary>
         public static readonly MyStringId DisplayName_Block_SteelCatwalkCorner = MyStringId.GetOrCompute("DisplayName_Block_SteelCatwalkCorner");

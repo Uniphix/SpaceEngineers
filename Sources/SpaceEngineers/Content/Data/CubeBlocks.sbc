@@ -13273,7 +13273,7 @@
       <DisassembleRatio>2.5</DisassembleRatio>
     </Definition>
     <!-- Region NON-DEFORMING SLOPED ARMOR -->
-    
+    <!-- old control panel -->
     <Definition>
       <Id>
         <TypeId>TerminalBlock</TypeId>
@@ -13303,6 +13303,7 @@
       <EdgeType>Light</EdgeType>
       <BuildTimeSeconds>3</BuildTimeSeconds>
     </Definition>
+    <!-- old control panel end -->
     <Definition>
       <Id>
         <TypeId>MyProgrammableBlock</TypeId>
@@ -13339,6 +13340,7 @@
       </MountPoints>
       <DamageEffectId>214</DamageEffectId>
     </Definition>
+    <!-- old control panel (small ship) -->
     <Definition>
       <Id>
         <TypeId>TerminalBlock</TypeId>
@@ -13368,6 +13370,67 @@
       <EdgeType>Light</EdgeType>
       <BuildTimeSeconds>3</BuildTimeSeconds>
     </Definition>
+    <!-- old control panel (small ship) end -->
+    <!-- new control panels begin -->
+    <Definition>
+      <Id>
+        <TypeId>ControlPanel</TypeId>
+        <SubtypeId>LargeControlPanel</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Block_ControlPanel_Toggle</DisplayName>
+      <Icon>Textures\GUI\Icons\Cubes\Control Panel.dds</Icon>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\Cubes\Large\ControlPanel.mwm</Model>
+      <Components>
+        <Component Subtype="Construction" Count="1" />
+        <Component Subtype="Computer" Count="1" />
+        <Component Subtype="Display" Count="1" />
+      </Components>
+      <CriticalComponent Subtype="Construction" Index="0" />
+      <MountPoints>
+        <MountPoint Side="Back" ExclusionMask="3" PropertiesMask="3" StartY="0.4" StartX="0.44" EndY="0.6" EndX="0.55" />
+      </MountPoints>
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\ControlPanelConstruction_1.mwm" />
+      </BuildProgressModels>
+      <BlockPairName>ControlPanelT</BlockPairName>
+      <MirroringZ>Y</MirroringZ>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>3</BuildTimeSeconds>
+    </Definition>
+    <Definition>
+      <Id>
+        <TypeId>ControlPanel</TypeId>
+        <SubtypeId>SmallControlPanel</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Block_ControlPanel_Toggle</DisplayName>
+      <Icon>Textures\GUI\Icons\Cubes\Control Panel.dds</Icon>
+      <CubeSize>Small</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\Cubes\Small\ControlPanel.mwm</Model>
+      <Components>
+        <Component Subtype="Construction" Count="1" />
+        <Component Subtype="Computer" Count="1" />
+        <Component Subtype="Display" Count="1" />
+      </Components>
+      <CriticalComponent Subtype="Construction" Index="0" />
+      <MountPoints>
+        <MountPoint Side="Back" ExclusionMask="3" PropertiesMask="3" StartX="0.4" StartY="0.44" EndX="0.6" EndY="0.55" />
+      </MountPoints>
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="1.00" File="Models\Cubes\small\ControlPanelConstruction_1.mwm" />
+      </BuildProgressModels>
+      <BlockPairName>ControlPanelT</BlockPairName>
+      <MirroringZ>Y</MirroringZ>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>3</BuildTimeSeconds>
+    </Definition>
+    <!--new control panel end-->
     <Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
       <Id>
         <TypeId>LargeGatlingTurret</TypeId>
