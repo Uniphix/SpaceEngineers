@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Sandbox.ModAPI.Ingame
 {
-    public interface IMyControlPanel : IMyFunctionalBlock
+    public interface IMyControlPanel : IMyTerminalBlock
     {
     }
 }

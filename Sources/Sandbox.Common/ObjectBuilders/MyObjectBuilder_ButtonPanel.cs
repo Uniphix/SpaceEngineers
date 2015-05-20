@@ -9,7 +9,7 @@ namespace Sandbox.Common.ObjectBuilders
 {
     [ProtoContract]
     [MyObjectBuilderDefinition]
-    public class MyObjectBuilder_ButtonPanel : MyObjectBuilder_FunctionalBlock
+    public class MyObjectBuilder_ButtonPanel : MyObjectBuilder_TerminalBlock
     {
         [ProtoMember]
         public MyObjectBuilder_Toolbar Toolbar;

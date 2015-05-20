@@ -26,7 +26,7 @@ using VRageMath;
 namespace Sandbox.Game.Entities.Blocks
 {
     [MyCubeBlockType(typeof(MyObjectBuilder_ButtonPanel))]
-    internal class MyButtonPanel : MyFunctionalBlock, IMyPowerConsumer, Sandbox.ModAPI.IMyButtonPanel
+    internal class MyButtonPanel : MyTerminalBlock, IMyPowerConsumer, Sandbox.ModAPI.IMyButtonPanel
     {
         [PreloadRequired]
         class MySyncButtonPanel : MySyncEntity

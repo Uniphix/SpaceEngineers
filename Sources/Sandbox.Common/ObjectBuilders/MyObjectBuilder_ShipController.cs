@@ -7,7 +7,7 @@ namespace Sandbox.Common.ObjectBuilders
 {
     [ProtoContract]
     [MyObjectBuilderDefinition]
-    public class MyObjectBuilder_ShipController : MyObjectBuilder_FunctionalBlock
+    public class MyObjectBuilder_ShipController : MyObjectBuilder_TerminalBlock
     {
         [ProtoMember]
         public bool UseSingleWeaponMode;

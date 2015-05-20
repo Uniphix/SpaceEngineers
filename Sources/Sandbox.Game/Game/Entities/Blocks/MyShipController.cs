@@ -33,7 +33,7 @@ namespace Sandbox.Game.Entities
         Primary = 1,
         Secondary = 2
     };
-    partial class MyShipController : MyFunctionalBlock, IMyControllableEntity, IMyRechargeSocketOwner, IMyShipController
+    partial class MyShipController : MyTerminalBlock, IMyControllableEntity, IMyRechargeSocketOwner, IMyShipController
     {
         #region Fields
         public MyGridGyroSystem GridGyroSystem;
