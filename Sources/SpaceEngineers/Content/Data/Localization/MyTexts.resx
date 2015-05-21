@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -4825,9 +4825,6 @@ Reinstalling the game is not enough, because Steam does not delete unknown files
   </data>
   <data name="DisplayName_Block_ControlPanel" xml:space="preserve">
     <value>Control Panel</value>
-  </data>
-  <data name="DisplayName_Block_ControlPanel_Toggle" xml:space="preserve">
-    <value>Control Panel with On/Off</value>
   </data>
   <data name="DisplayName_Block_SteelCatwalkCorner" xml:space="preserve">
     <value>Steel Catwalk Corner</value>
