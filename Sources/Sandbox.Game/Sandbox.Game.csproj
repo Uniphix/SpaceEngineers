@@ -122,6 +122,7 @@
     <Compile Include="Definitions\MyAnimalBotDefinition.cs" />
     <Compile Include="Definitions\MyAreaMarkerDefinition.cs" />
     <Compile Include="Definitions\MyControllerSchemaDefinition.cs" />
+    <Compile Include="Definitions\MyControlPanelDefinition.cs" />
     <Compile Include="Definitions\MyConveyorSorterDefinition.cs" />
     <Compile Include="Definitions\MyCryoChamberDefinition.cs" />
     <Compile Include="Definitions\MyDx11VoxelMaterialDefinition.cs" />

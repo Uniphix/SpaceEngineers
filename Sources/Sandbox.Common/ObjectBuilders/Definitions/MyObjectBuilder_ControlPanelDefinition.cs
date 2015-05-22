@@ -4,12 +4,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Sandbox.Common.ObjectBuilders
+namespace Sandbox.Common.ObjectBuilders.Definitions
 {
     [ProtoContract]
     [MyObjectBuilderDefinition]
-    public class MyObjectBuilder_ControlPanel : MyObjectBuilder_FunctionalBlock
+    public class MyObjectBuilder_ControlPanelDefinition : MyObjectBuilder_CubeBlockDefinition
     {
-        private int debugpoint = 1;
     }
 }

@@ -13274,7 +13274,7 @@
     </Definition>
     <!-- Region NON-DEFORMING SLOPED ARMOR -->
     
-    <Definition>
+    <Definition xsi:type="MyObjectBuilder_ControlPanelDefinition">
       <Id>
         <TypeId>TerminalBlock</TypeId>
         <SubtypeId>ControlPanel</SubtypeId>
@@ -13339,7 +13339,7 @@
       </MountPoints>
       <DamageEffectId>214</DamageEffectId>
     </Definition>
-    <Definition>
+    <Definition xsi:type="MyObjectBuilder_ControlPanelDefinition">
       <Id>
         <TypeId>TerminalBlock</TypeId>
         <SubtypeId>SmallControlPanel</SubtypeId>
