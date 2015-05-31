@@ -54,7 +54,7 @@ namespace SpaceEngineers.Game.Entities.Blocks
                 {
                     x.m_helpOthers = v;
                 };
-                helpOthersCheck.EnableAction();
+                helpOthersCheck.EnableToggleAction();
                 MyTerminalControlFactory.AddControl(helpOthersCheck);
             }
         }
