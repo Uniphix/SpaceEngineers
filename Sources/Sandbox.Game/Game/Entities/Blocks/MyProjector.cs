@@ -118,7 +118,7 @@ namespace Sandbox.Game.Entities.Blocks
                 {
                     x.SyncObject.SendNewKeepProjection(v);
                 };
-            keepProjectionToggle.EnableAction();
+            keepProjectionToggle.EnableToggleAction();
             keepProjectionToggle.Enabled = (b) => b.IsProjecting();
             MyTerminalControlFactory.AddControl(keepProjectionToggle);
 

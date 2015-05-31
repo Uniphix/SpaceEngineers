@@ -129,13 +129,13 @@ namespace Sandbox.Game.Entities.Cube
             var steering = new MyTerminalControlCheckbox<MyMotorSuspension>("Steering", MySpaceTexts.BlockPropertyTitle_Motor_Steering, MySpaceTexts.BlockPropertyDescription_Motor_Steering);
             steering.Getter = (x) => x.Steering;
             steering.Setter = (x, v) => x.SyncObject.ChangeSteering(v);
-            steering.EnableAction();
+            steering.EnableToggleAction();
             MyTerminalControlFactory.AddControl(steering);
 
             var propulsion = new MyTerminalControlCheckbox<MyMotorSuspension>("Propulsion", MySpaceTexts.BlockPropertyTitle_Motor_Propulsion, MySpaceTexts.BlockPropertyDescription_Motor_Propulsion);
             propulsion.Getter = (x) => x.Propulsion;
             propulsion.Setter = (x, v) => x.SyncObject.ChangePropulsion(v);
-            propulsion.EnableAction();
+            propulsion.EnableToggleAction();
             MyTerminalControlFactory.AddControl(propulsion);
 
             var damping = new MyTerminalControlSlider<MyMotorSuspension>("Damping", MySpaceTexts.BlockPropertyTitle_Motor_Damping, MySpaceTexts.BlockPropertyTitle_Motor_Damping);

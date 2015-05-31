@@ -229,7 +229,7 @@ namespace Sandbox.Game.Entities
             autoPilot.Getter = (x) => x.m_autoPilotEnabled;
             autoPilot.Setter = (x, v) => x.SetAutoPilotEnabled(v);
             autoPilot.Enabled = r => r.CanEnableAutoPilot();
-            autoPilot.EnableAction();
+            autoPilot.EnableToggleAction();
             MyTerminalControlFactory.AddControl(autoPilot);
 
             var flightMode = new MyTerminalControlCombobox<MyRemoteControl>("FlightMode", MySpaceTexts.BlockPropertyTitle_FlightMode, MySpaceTexts.Blank);
