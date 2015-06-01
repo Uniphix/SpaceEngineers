@@ -133,6 +133,7 @@ namespace Sandbox.Game.Entities.Blocks
                 };
             keepProjectionToggle.EnableToggleAction();
             keepProjectionToggle.Enabled = (b) => b.IsProjecting();
+            keepProjectionToggle.EnableOnOffActions();
             MyTerminalControlFactory.AddControl(keepProjectionToggle);
 
             //ShowOnlyBuildable
@@ -144,6 +145,7 @@ namespace Sandbox.Game.Entities.Blocks
                 x.OnOffsetsChanged();
             };
             showOnlyBuildableBlockToggle.Enabled = (b) => b.IsProjecting();
+            showOnlyBuildableBlockToggle.EnableOnOffActions();
             MyTerminalControlFactory.AddControl(showOnlyBuildableBlockToggle);
 
             //Position
