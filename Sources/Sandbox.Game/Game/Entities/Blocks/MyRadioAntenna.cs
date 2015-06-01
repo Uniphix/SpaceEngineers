@@ -157,7 +157,6 @@ namespace Sandbox.Game.Entities.Cube
             showShipName.Getter = (x) => x.ShowShipName;
             showShipName.Setter = (x, v) => x.RadioBroadcaster.SyncObject.SendChangeRadioAntennaDisplayName(v);
             showShipName.EnableToggleAction();
-            showShipName.EnableOnOffActions();
             MyTerminalControlFactory.AddControl(showShipName);
 
         }

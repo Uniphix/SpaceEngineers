@@ -77,6 +77,7 @@ namespace Sandbox.Game.Entities.Blocks
             autoRefill.Getter = (x) => x.m_autoRefill;
             autoRefill.Setter = (x, v) => x.m_autoRefill = v;
             autoRefill.EnableToggleAction();
+            autoRefill.EnableOnOffActions();
             MyTerminalControlFactory.AddControl(autoRefill);
         }
 
