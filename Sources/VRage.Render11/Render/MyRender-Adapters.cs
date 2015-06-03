@@ -207,7 +207,7 @@ namespace VRageRender
 
                 LogAdapterInfoBegin(ref info);
 
-                if(supportedDevice && vram > 0)
+                if(supportedDevice)
                 {
                     for(int j=0; j<factory.Adapters[i].Outputs.Length; j++)
                     {
