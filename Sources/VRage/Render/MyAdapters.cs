@@ -60,6 +60,7 @@ namespace VRageRender
 
         // for dx 11
         public bool IsDx11Supported;
+        public bool IsIntegrated;
         public ulong VRAM;
         public bool MultithreadedRenderingSupported;
         public MyTextureQuality MaxTextureQualitySupported;
