@@ -158,6 +158,9 @@ namespace VRageRender
             }
             catch { }
 
+            var dxgidevice = Device.QueryInterface<SharpDX.DXGI.Device>();
+            var dxgiadapter = dxgidevice.GetParent<SharpDX.DXGI.Adapter>();
+
             if (flags.HasFlag(DeviceCreationFlags.Debug))
             {
                 if (DebugDevice != null)

@@ -122,13 +122,62 @@ namespace VRageRender
 
             LogInfoFromWMI();
 
-            for(int i=0; i<factory.Adapters.Length; i++)
+            Adapter[] adapters = null;
+            
+            try
             {
-                var adapter = factory.Adapters[i];
+//                var defaultdxdevice = new Device(DriverType.Hardware, DeviceCreationFlags.None, featureLevels);
+                // SwapChain description 
+                // Create the Rendering form 
+                var form = new SharpDX.Windows.RenderForm("SharpDX - test");
+                form.ClientSize = new System.Drawing.Size(100, 100);
+
+                var desc = new SwapChainDescription()
+                {
+                    BufferCount = 2,
+                    ModeDescription =
+                        new ModeDescription(800, 600,
+                                            new Rational(60, 1), Format.R8G8B8A8_UNorm),
+                    IsWindowed = true,
+                    SampleDescription = new SampleDescription(1, 0),
+                    SwapEffect = SwapEffect.Discard,
+                    Usage = Usage.RenderTargetOutput
+                };
+
+                // Create Device and SwapChain 
+                Device defaultdxdevice;
+                SwapChain swapChain;
+                Device.CreateWithSwapChain(DriverType.Hardware, DeviceCreationFlags.None, desc, out defaultdxdevice, out swapChain);
+                if (defaultdxdevice != null)
+                {
+                    var dxgidevice = defaultdxdevice.QueryInterface<SharpDX.DXGI.Device>();
+                    var dxgiadapter = dxgidevice.GetParent<SharpDX.DXGI.Adapter>();
+                    //var dxgifactory = dxgiadapter.GetParent<SharpDX.DXGI.Factory>();
+
+                    //factory = dxgifactory;
+                    if (dxgiadapter != null)
+                    {
+                        adapters = new Adapter[1];
+                        adapters[0] = dxgiadapter;
+                    }
+                    dxgidevice.Dispose();
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+            
+            if (adapters == null)
+                adapters = factory.Adapters;
+
+            for(int i=0; i < adapters.Length; i++)
+            {
+                var testadapter = adapters[i];
                 Device adapterTestDevice = null;
                 try
                 {
-                    adapterTestDevice = new Device(adapter, DeviceCreationFlags.None, featureLevels);
+                    adapterTestDevice = new Device(testadapter, DeviceCreationFlags.None, featureLevels);
                 }
                 catch(SharpDXException e)
                 {
@@ -144,7 +193,10 @@ namespace VRageRender
                     adapterTestDevice.CheckThreadingSupport(out supportsConcurrentResources, out supportsCommandLists);
                 }
 
-//                void* ptr = ((IntPtr)adapter.Description.DedicatedVideoMemory).ToPointer();
+                var dxgidevice = adapterTestDevice.QueryInterface<SharpDX.DXGI.Device>();
+                var adapter = dxgidevice.GetParent<SharpDX.DXGI.Adapter>();
+                
+                //                void* ptr = ((IntPtr)adapter.Description.DedicatedVideoMemory).ToPointer();
 //                ulong vram = (ulong)ptr;
                 // DedicatedSystemMemory = bios or DVMT preallocated video memory, that cannot be used by OS - need retest on pc with only cpu/chipset based graphic
                 // DedicatedVideoMemory = discrete graphic video memory
@@ -264,6 +316,8 @@ namespace VRageRender
 
                 if(adapterTestDevice != null)
                 {
+                    dxgidevice = null;
+                    adapter = null;
                     adapterTestDevice.Dispose();
                     adapterTestDevice = null;
                 }
