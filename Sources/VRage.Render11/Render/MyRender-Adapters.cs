@@ -19,13 +19,11 @@ namespace VRageRender
         static MyAdapterInfo[] m_adapterInfoList;
         static Dictionary<int, ModeDescription[]> m_adapterModes = new Dictionary<int, ModeDescription[]>();
 
-        static Factory m_factory;
-        static Factory GetFactory()
+        static Factory1 m_factory;
+        static Factory1 GetFactory()
         {
-            if(m_factory == null)
-            {
-                m_factory = new Factory();
-            }
+            if (m_factory == null)
+                m_factory = new Factory1();
             return m_factory;
         }
 

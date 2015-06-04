@@ -20,6 +20,9 @@ using BoundingFrustum = VRageMath.BoundingFrustum;
 using System.Diagnostics;
 using ParallelTasks;
 using System.Text.RegularExpressions;
+using SharpDX.Direct3D9;
+using Resource = SharpDX.Direct3D11.Resource;
+using FillMode = SharpDX.Direct3D11.FillMode;
 
 namespace VRageRender
 {
@@ -424,9 +427,9 @@ namespace VRageRender
         {
             try
             {
-                Resource.ToFile(MyRender11.Context, res, fmt, path);
+//                Resource.ToFile(MyRender11.Context, res, fmt, path);
 
-                MyRenderProxy.ScreenshotTaken(true, path, false);
+//                MyRenderProxy.ScreenshotTaken(true, path, false);
             }
             catch (SharpDX.SharpDXException e)
             {

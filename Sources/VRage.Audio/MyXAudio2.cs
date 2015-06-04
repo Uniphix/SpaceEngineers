@@ -164,7 +164,7 @@ namespace VRage.Audio
                 }
             }
 
-            m_masterVoice = new MasteringVoice(m_audioEngine, deviceIndex: m_deviceNumber);
+            m_masterVoice = new MasteringVoice(m_audioEngine, 2, 44100, deviceIndex: m_deviceNumber);
 
             m_calculateFlags = CalculateFlags.Matrix | CalculateFlags.Doppler;
             if ((m_deviceDetails.OutputFormat.ChannelMask & Speakers.LowFrequency) != 0)

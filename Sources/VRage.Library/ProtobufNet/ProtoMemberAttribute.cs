@@ -45,11 +45,11 @@ namespace ProtoBuf
         /// Creates a new ProtoMemberAttribute instance.
         /// </summary>
         /// <param name="tag">Specifies the unique tag used to identify this member within the type.</param>
-        public ProtoMemberAttribute([CallerLineNumber]int tag = 0)
+        public ProtoMemberAttribute([Caller_LineNumber]int tag = 0)
             : this(false, tag)
         { }
 
-        internal ProtoMemberAttribute(bool forced, [CallerLineNumber]int tag = 0)
+        internal ProtoMemberAttribute(bool forced, [Caller_LineNumber]int tag = 0)
         {
             if (tag <= 0 && !forced) throw new ArgumentOutOfRangeException("tag");
             this.tag = tag;

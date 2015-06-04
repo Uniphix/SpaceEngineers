@@ -629,7 +629,7 @@ namespace VRageRender.Graphics
                 m_samplerState.Apply();
 
             // Build ortho-projection matrix
-            SharpDX.ViewportF viewport = m_graphicsDevice.Viewport;
+            SharpDX.Viewport viewport = m_graphicsDevice.Viewport;
             float xRatio = (viewport.Width > 0) ? (1f/(viewport.Width)) : 0f;
             float yRatio = (viewport.Height > 0) ? (-1f/(viewport.Height)) : 0f;
             var matrix = new Matrix { M11 = xRatio * 2f, M22 = yRatio * 2f, M33 = 1f, M44 = 1f, M41 = -1f, M42 = 1f };
@@ -760,7 +760,7 @@ namespace VRageRender.Graphics
         /// <summary>
         /// Use a ResourceContext per GraphicsDevice (DeviceContext)
         /// </summary>
-        private class ResourceContext : SharpDX.Component
+        private class ResourceContext
         {
             public readonly VertexBuffer VertexBuffer;
 
@@ -774,11 +774,9 @@ namespace VRageRender.Graphics
                 VertexBuffer.DebugName = "SpriteBatchVB(" + debugName + ")";
             }
 
-            protected override void Dispose(bool disposeManagedResources)
+            public void Dispose()
             {
                 VertexBuffer.Dispose();
-
-                base.Dispose(disposeManagedResources);
             }
         }
 

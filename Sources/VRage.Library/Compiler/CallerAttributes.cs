@@ -10,17 +10,17 @@ namespace System.Runtime.CompilerServices
     // It won't compile on .NET 4.5 and newer, when using .NET 4.5 and newer, delete this file.
 
     [AttributeUsage(AttributeTargets.Parameter, AllowMultiple = false, Inherited = false)]
-    public class CallerMemberNameAttribute : Attribute
+    public class Caller_MemberNameAttribute : Attribute
     {
     }
 
     [AttributeUsage(AttributeTargets.Parameter, AllowMultiple = false, Inherited = false)]
-    public class CallerFilePathAttribute : Attribute
+    public class Caller_FilePathAttribute : Attribute
     {
     }
 
     [AttributeUsage(AttributeTargets.Parameter, AllowMultiple = false, Inherited = false)]
-    public class CallerLineNumberAttribute : Attribute
+    public class Caller_LineNumberAttribute : Attribute
     {
     }
 
@@ -29,7 +29,7 @@ namespace System.Runtime.CompilerServices
         /// <summary>
         /// Helper method which returns file path of caller.
         /// </summary>
-        public static string GetCallerFileName([CallerFilePath] string filePath = null)
+        public static string GetCallerFileName([Caller_FilePath] string filePath = null)
         {
             return filePath;
         }
