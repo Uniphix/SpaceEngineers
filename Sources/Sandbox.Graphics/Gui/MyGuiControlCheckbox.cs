@@ -73,6 +73,13 @@ namespace Sandbox.Graphics.GUI
                 CheckedIcon = MyGuiConstants.TEXTURE_BUTTON_ICON_SLAVE,
                 SizeOverride = MyGuiConstants.TEXTURE_BUTTON_ICON_SLAVE.SizeGui * 1.4f,
             };
+            m_styles[(int)MyGuiControlCheckboxStyleEnum.SliderOnOff] = new StyleDefinition()
+            {
+                NormalCheckedTexture = MyGuiConstants.TEXTURE_ONOFFSWITCH_DEFAULT_NORMAL_ON,
+                NormalUncheckedTexture = MyGuiConstants.TEXTURE_ONOFFSWITCH_DEFAULT_NORMAL_OFF,
+                HighlightCheckedTexture = MyGuiConstants.TEXTURE_ONOFFSWITCH_DEFAULT_HIGHLIGHT_ON,
+                HighlightUncheckedTexture = MyGuiConstants.TEXTURE_ONOFFSWITCH_DEFAULT_HIGHLIGHT_OFF,
+            };
         }
 
         public static StyleDefinition GetVisualStyle(MyGuiControlCheckboxStyleEnum style)

@@ -808,6 +808,24 @@ namespace Sandbox.Graphics.GUI
         {
             LeftTop = new MyGuiSizedTexture() { SizePx = new Vector2(45f, 45f), Texture = @"Textures\GUI\Icons\buttons\SquareButton.dds", }
         };
+
+        public static readonly MyGuiCompositeTexture TEXTURE_ONOFFSWITCH_DEFAULT_NORMAL_ON = new MyGuiCompositeTexture()
+        {
+            LeftTop = new MyGuiSizedTexture() { SizePx = new Vector2(57f, 54f), Texture = @"Textures\GUI\Controls\onoffswitch_on.dds", }
+        };
+        public static readonly MyGuiCompositeTexture TEXTURE_ONOFFSWITCH_DEFAULT_NORMAL_OFF = new MyGuiCompositeTexture()
+        {
+            LeftTop = new MyGuiSizedTexture() { SizePx = new Vector2(57f, 54f), Texture = @"Textures\GUI\Controls\onoffswitch_off.dds", }
+        };
+        public static readonly MyGuiCompositeTexture TEXTURE_ONOFFSWITCH_DEFAULT_HIGHLIGHT_ON = new MyGuiCompositeTexture()
+        {
+            LeftTop = new MyGuiSizedTexture() { SizePx = new Vector2(57f, 54f), Texture = @"Textures\GUI\Controls\onoffswitch_on_highlight.dds", }
+        };
+        public static readonly MyGuiCompositeTexture TEXTURE_ONOFFSWITCH_DEFAULT_HIGHLIGHT_OFF = new MyGuiCompositeTexture()
+        {
+            LeftTop = new MyGuiSizedTexture() { SizePx = new Vector2(57f, 54f), Texture = @"Textures\GUI\Controls\onoffswitch_off_highlight.dds", }
+        };
+
     }
 
 }
