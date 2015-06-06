@@ -122,12 +122,12 @@ namespace Sandbox.Game.Entities.Cube
         {
             MyTerminalControlFactory.RemoveBaseClass<MyRadioAntenna, MyTerminalBlock>();
 
-            var show = new MyTerminalControlOnOffSwitch<MyRadioAntenna>("ShowInTerminal", MySpaceTexts.Terminal_ShowInTerminal, MySpaceTexts.Terminal_ShowInTerminalToolTip);
+            var show = new MyTerminalControlCheckbox<MyRadioAntenna>("ShowInTerminal", MySpaceTexts.Terminal_ShowInTerminal, MySpaceTexts.Terminal_ShowInTerminalToolTip);
             show.Getter = (x) => x.ShowInTerminal;
             show.Setter = (x, v) => x.RequestShowInTerminal(v);
             MyTerminalControlFactory.AddControl(show);
 
-            var showConfig = new MyTerminalControlOnOffSwitch<MyRadioAntenna>("ShowInToolbarConfig", MySpaceTexts.Terminal_ShowInToolbarConfig, MySpaceTexts.Terminal_ShowInToolbarConfigToolTip);
+            var showConfig = new MyTerminalControlCheckbox<MyRadioAntenna>("ShowInToolbarConfig", MySpaceTexts.Terminal_ShowInToolbarConfig, MySpaceTexts.Terminal_ShowInToolbarConfigToolTip);
             showConfig.Getter = (x) => x.ShowInToolbarConfig;
             showConfig.Setter = (x, v) => x.RequestShowInToolbarConfig(v);
             MyTerminalControlFactory.AddControl(showConfig);
