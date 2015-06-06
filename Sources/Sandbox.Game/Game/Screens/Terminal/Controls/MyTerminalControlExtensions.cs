@@ -83,6 +83,15 @@ namespace Sandbox.Game.Gui
             return checkbox.EnableToggleAction(MyTerminalActionIcons.TOGGLE, name, onText, offText);
         }
 
+        public static MyTerminalAction<TBlock> EnableToggleAction<TBlock>(this MyTerminalControlCheckbox<TBlock> onOff, string iconPath)
+           where TBlock : MyTerminalBlock
+        {
+            StringBuilder name = CombineOnOff(onOff.Title, onOff.OnText, onOff.OffText);
+            StringBuilder onText = MyTexts.Get(onOff.OnText);
+            StringBuilder offText = MyTexts.Get(onOff.OffText);
+            return onOff.EnableToggleAction(iconPath, name, onText, offText);
+        }
+
         public static void EnableOnOffActions<TBlock>(this MyTerminalControlCheckbox<TBlock> checkbox)
             where TBlock : MyTerminalBlock
         {
