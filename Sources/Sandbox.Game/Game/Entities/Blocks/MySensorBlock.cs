@@ -407,7 +407,7 @@ namespace Sandbox.Game.Entities.Blocks
             var separatorFilters = new MyTerminalControlSeparator<MySensorBlock>();
             MyTerminalControlFactory.AddControl(separatorFilters);
 
-            var detectPlayersSwitch = new MyTerminalControlOnOffSwitch<MySensorBlock>("Detect Players", MySpaceTexts.BlockPropertyTitle_SensorDetectPlayers, MySpaceTexts.BlockPropertyTitle_SensorDetectPlayers);
+            var detectPlayersSwitch = new MyTerminalControlCheckbox<MySensorBlock>("Detect Players", MySpaceTexts.BlockPropertyTitle_SensorDetectPlayers, MySpaceTexts.BlockPropertyTitle_SensorDetectPlayers);
             detectPlayersSwitch.Getter = (x) => x.DetectPlayers;
             detectPlayersSwitch.Setter = (x, v) =>
             {
@@ -418,7 +418,7 @@ namespace Sandbox.Game.Entities.Blocks
             detectPlayersSwitch.EnableOnOffActions(MyTerminalActionIcons.CHARACTER_ON, MyTerminalActionIcons.CHARACTER_OFF);
             MyTerminalControlFactory.AddControl(detectPlayersSwitch);
 
-            var detectFloatingObjectsSwitch = new MyTerminalControlOnOffSwitch<MySensorBlock>("Detect Floating Objects", MySpaceTexts.BlockPropertyTitle_SensorDetectFloatingObjects, MySpaceTexts.BlockPropertyTitle_SensorDetectFloatingObjects);
+            var detectFloatingObjectsSwitch = new MyTerminalControlCheckbox<MySensorBlock>("Detect Floating Objects", MySpaceTexts.BlockPropertyTitle_SensorDetectFloatingObjects, MySpaceTexts.BlockPropertyTitle_SensorDetectFloatingObjects);
             detectFloatingObjectsSwitch.Getter = (x) => x.DetectFloatingObjects;
             detectFloatingObjectsSwitch.Setter = (x, v) =>
             {
@@ -429,7 +429,7 @@ namespace Sandbox.Game.Entities.Blocks
             detectFloatingObjectsSwitch.EnableOnOffActions(MyTerminalActionIcons.MOVING_OBJECT_ON, MyTerminalActionIcons.MOVING_OBJECT_OFF);
             MyTerminalControlFactory.AddControl(detectFloatingObjectsSwitch);
 
-            var detectSmallShipsSwitch = new MyTerminalControlOnOffSwitch<MySensorBlock>("Detect Small Ships", MySpaceTexts.BlockPropertyTitle_SensorDetectSmallShips, MySpaceTexts.BlockPropertyTitle_SensorDetectSmallShips);
+            var detectSmallShipsSwitch = new MyTerminalControlCheckbox<MySensorBlock>("Detect Small Ships", MySpaceTexts.BlockPropertyTitle_SensorDetectSmallShips, MySpaceTexts.BlockPropertyTitle_SensorDetectSmallShips);
             detectSmallShipsSwitch.Getter = (x) => x.DetectSmallShips;
             detectSmallShipsSwitch.Setter = (x, v) =>
             {
@@ -440,7 +440,7 @@ namespace Sandbox.Game.Entities.Blocks
             detectSmallShipsSwitch.EnableOnOffActions(MyTerminalActionIcons.SMALLSHIP_ON, MyTerminalActionIcons.SMALLSHIP_OFF);
             MyTerminalControlFactory.AddControl(detectSmallShipsSwitch);
 
-            var detectLargeShipsSwitch = new MyTerminalControlOnOffSwitch<MySensorBlock>("Detect Large Ships", MySpaceTexts.BlockPropertyTitle_SensorDetectLargeShips, MySpaceTexts.BlockPropertyTitle_SensorDetectLargeShips);
+            var detectLargeShipsSwitch = new MyTerminalControlCheckbox<MySensorBlock>("Detect Large Ships", MySpaceTexts.BlockPropertyTitle_SensorDetectLargeShips, MySpaceTexts.BlockPropertyTitle_SensorDetectLargeShips);
             detectLargeShipsSwitch.Getter = (x) => x.DetectLargeShips;
             detectLargeShipsSwitch.Setter = (x, v) =>
             {
@@ -451,7 +451,7 @@ namespace Sandbox.Game.Entities.Blocks
             detectLargeShipsSwitch.EnableOnOffActions(MyTerminalActionIcons.LARGESHIP_ON, MyTerminalActionIcons.LARGESHIP_OFF);
             MyTerminalControlFactory.AddControl(detectLargeShipsSwitch);
 
-            var detectStationsSwitch = new MyTerminalControlOnOffSwitch<MySensorBlock>("Detect Stations", MySpaceTexts.BlockPropertyTitle_SensorDetectStations, MySpaceTexts.BlockPropertyTitle_SensorDetectStations);
+            var detectStationsSwitch = new MyTerminalControlCheckbox<MySensorBlock>("Detect Stations", MySpaceTexts.BlockPropertyTitle_SensorDetectStations, MySpaceTexts.BlockPropertyTitle_SensorDetectStations);
             detectStationsSwitch.Getter = (x) => x.DetectStations;
             detectStationsSwitch.Setter = (x, v) =>
             {
@@ -462,7 +462,7 @@ namespace Sandbox.Game.Entities.Blocks
             detectStationsSwitch.EnableOnOffActions(MyTerminalActionIcons.STATION_ON, MyTerminalActionIcons.STATION_OFF);
             MyTerminalControlFactory.AddControl(detectStationsSwitch);
 
-            var detectAsteroidsSwitch = new MyTerminalControlOnOffSwitch<MySensorBlock>("Detect Asteroids", MySpaceTexts.BlockPropertyTitle_SensorDetectAsteroids, MySpaceTexts.BlockPropertyTitle_SensorDetectAsteroids);
+            var detectAsteroidsSwitch = new MyTerminalControlCheckbox<MySensorBlock>("Detect Asteroids", MySpaceTexts.BlockPropertyTitle_SensorDetectAsteroids, MySpaceTexts.BlockPropertyTitle_SensorDetectAsteroids);
             detectAsteroidsSwitch.Getter = (x) => x.DetectAsteroids;
             detectAsteroidsSwitch.Setter = (x, v) =>
             {
@@ -476,7 +476,7 @@ namespace Sandbox.Game.Entities.Blocks
             var separatorFactionFilters = new MyTerminalControlSeparator<MySensorBlock>();
             MyTerminalControlFactory.AddControl(separatorFactionFilters);
 
-            var detectOwnerSwitch = new MyTerminalControlOnOffSwitch<MySensorBlock>("Detect Owner", MySpaceTexts.BlockPropertyTitle_SensorDetectOwner, MySpaceTexts.BlockPropertyTitle_SensorDetectOwner);
+            var detectOwnerSwitch = new MyTerminalControlCheckbox<MySensorBlock>("Detect Owner", MySpaceTexts.BlockPropertyTitle_SensorDetectOwner, MySpaceTexts.BlockPropertyTitle_SensorDetectOwner);
             detectOwnerSwitch.Getter = (x) => x.DetectOwner;
             detectOwnerSwitch.Setter = (x, v) =>
             {
@@ -487,7 +487,7 @@ namespace Sandbox.Game.Entities.Blocks
             detectOwnerSwitch.EnableOnOffActions();
             MyTerminalControlFactory.AddControl(detectOwnerSwitch);
 
-            var detectFriendlySwitch = new MyTerminalControlOnOffSwitch<MySensorBlock>("Detect Friendly", MySpaceTexts.BlockPropertyTitle_SensorDetectFriendly, MySpaceTexts.BlockPropertyTitle_SensorDetectFriendly);
+            var detectFriendlySwitch = new MyTerminalControlCheckbox<MySensorBlock>("Detect Friendly", MySpaceTexts.BlockPropertyTitle_SensorDetectFriendly, MySpaceTexts.BlockPropertyTitle_SensorDetectFriendly);
             detectFriendlySwitch.Getter = (x) => x.DetectFriendly;
             detectFriendlySwitch.Setter = (x, v) =>
             {
@@ -498,7 +498,7 @@ namespace Sandbox.Game.Entities.Blocks
             detectFriendlySwitch.EnableOnOffActions();
             MyTerminalControlFactory.AddControl(detectFriendlySwitch);
 
-            var detectNeutralSwitch = new  MyTerminalControlOnOffSwitch<MySensorBlock>("Detect Neutral", MySpaceTexts.BlockPropertyTitle_SensorDetectNeutral, MySpaceTexts.BlockPropertyTitle_SensorDetectNeutral);
+            var detectNeutralSwitch = new  MyTerminalControlCheckbox<MySensorBlock>("Detect Neutral", MySpaceTexts.BlockPropertyTitle_SensorDetectNeutral, MySpaceTexts.BlockPropertyTitle_SensorDetectNeutral);
             detectNeutralSwitch.Getter = (x) => x.DetectNeutral;
             detectNeutralSwitch.Setter = (x, v) =>
             {
@@ -509,7 +509,7 @@ namespace Sandbox.Game.Entities.Blocks
             detectNeutralSwitch.EnableOnOffActions();
             MyTerminalControlFactory.AddControl(detectNeutralSwitch);
 
-            var detectEnemySwitch = new MyTerminalControlOnOffSwitch<MySensorBlock>("Detect Enemy", MySpaceTexts.BlockPropertyTitle_SensorDetectEnemy, MySpaceTexts.BlockPropertyTitle_SensorDetectEnemy);
+            var detectEnemySwitch = new MyTerminalControlCheckbox<MySensorBlock>("Detect Enemy", MySpaceTexts.BlockPropertyTitle_SensorDetectEnemy, MySpaceTexts.BlockPropertyTitle_SensorDetectEnemy);
             detectEnemySwitch.Getter = (x) => x.DetectEnemy;
             detectEnemySwitch.Setter = (x, v) =>
             {
