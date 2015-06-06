@@ -13,6 +13,7 @@ namespace Sandbox.Common.ObjectBuilders.Gui
         SwitchOnOffRight,
         Repeat,
         Slave,
+        SliderOnOff,
     }
 
     [ProtoContract]
