@@ -40,10 +40,15 @@ namespace Sandbox.Game.Gui
 
         protected override MyGuiControlBase CreateGui()
         {
-            m_checkbox = new MyGuiControlCheckbox(toolTip: MyTexts.GetString(Tooltip), visualStyle: Common.ObjectBuilders.Gui.MyGuiControlCheckboxStyleEnum.SliderOnOff);
+            m_checkbox = new MyGuiControlCheckbox(toolTip: MyTexts.GetString(Tooltip), visualStyle: Common.ObjectBuilders.Gui.MyGuiControlCheckboxStyleEnum.SliderOnOff, originAlign: MyGuiDrawAlignEnum.HORISONTAL_RIGHT_AND_VERTICAL_CENTER);
             m_checkboxClicked = OnCheckboxClicked;
             m_checkbox.IsCheckedChanged = m_checkboxClicked;
-            return new MyGuiControlBlockProperty(MyTexts.GetString(Title), MyTexts.GetString(Tooltip), m_checkbox, MyGuiControlBlockPropertyLayoutEnum.Horizontal);
+            MyGuiControlBase control = new MyGuiControlBlockProperty(MyTexts.GetString(Title), MyTexts.GetString(Tooltip), m_checkbox, MyGuiControlBlockPropertyLayoutEnum.Horizontal);
+
+            if (control != null)
+                control.OriginAlign = MyGuiDrawAlignEnum.HORISONTAL_RIGHT_AND_VERTICAL_CENTER;
+
+            return control;
         }
 
         void OnCheckboxClicked(MyGuiControlCheckbox obj)
