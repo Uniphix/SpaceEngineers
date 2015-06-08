@@ -10,6 +10,7 @@ using VRage.Utils;
 using Sandbox.Game.Localization;
 using VRage;
 using VRage.Library.Utils;
+using VRageMath;
 
 namespace Sandbox.Game.Gui
 {
@@ -40,13 +41,13 @@ namespace Sandbox.Game.Gui
 
         protected override MyGuiControlBase CreateGui()
         {
-            m_checkbox = new MyGuiControlCheckbox(toolTip: MyTexts.GetString(Tooltip), visualStyle: Common.ObjectBuilders.Gui.MyGuiControlCheckboxStyleEnum.SliderOnOff, originAlign: MyGuiDrawAlignEnum.HORISONTAL_RIGHT_AND_VERTICAL_CENTER);
+            m_checkbox = new MyGuiControlCheckbox(toolTip: MyTexts.GetString(Tooltip) + " - " + (FirstBlock != null ?  (Getter(FirstBlock) ? OnText : OffText) : OffText), visualStyle: Common.ObjectBuilders.Gui.MyGuiControlCheckboxStyleEnum.SliderOnOff, originAlign: MyGuiDrawAlignEnum.HORISONTAL_RIGHT_AND_VERTICAL_CENTER);
+            m_checkbox.Size = new Vector2(PREFERRED_CONTROL_WIDTH, m_checkbox.Size.Y);
             m_checkboxClicked = OnCheckboxClicked;
-            m_checkbox.IsCheckedChanged = m_checkboxClicked;
-            MyGuiControlBase control = new MyGuiControlBlockProperty(MyTexts.GetString(Title), MyTexts.GetString(Tooltip), m_checkbox, MyGuiControlBlockPropertyLayoutEnum.Horizontal);
+            m_checkbox.IsCheckedChanged = m_checkboxClicked;            
 
-            if (control != null)
-                control.OriginAlign = MyGuiDrawAlignEnum.HORISONTAL_RIGHT_AND_VERTICAL_CENTER;
+            MyGuiControlBase control = new MyGuiControlBlockProperty(MyTexts.GetString(Title), MyTexts.GetString(Tooltip), m_checkbox, MyGuiControlBlockPropertyLayoutEnum.Horizontal);
+            control.Size = new Vector2(PREFERRED_CONTROL_WIDTH, control.Size.Y);
 
             return control;
         }
@@ -61,13 +62,15 @@ namespace Sandbox.Game.Gui
 
         protected override void OnUpdateVisual()
         {
-            base.OnUpdateVisual();
-
             var first = FirstBlock;
             if (first != null)
-                m_checkbox.IsCheckedChanged = null;
-            m_checkbox.IsChecked = Getter(first);
-            m_checkbox.IsCheckedChanged = m_checkboxClicked;
+            {
+                m_checkbox.IsCheckedChanged -= m_checkboxClicked;
+                m_checkbox.IsChecked = Getter(first);
+                m_checkbox.IsCheckedChanged += m_checkboxClicked;
+                m_checkbox.SetToolTip(MyTexts.GetString(Tooltip) + " - " + MyTexts.GetString(m_checkbox.IsChecked ? OnText : OffText));
+            }
+            base.OnUpdateVisual();
         }
 
         void SwitchAction(TBlock block)
