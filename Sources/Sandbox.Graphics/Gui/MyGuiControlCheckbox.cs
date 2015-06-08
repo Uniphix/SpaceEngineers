@@ -79,7 +79,6 @@ namespace Sandbox.Graphics.GUI
                 NormalUncheckedTexture = MyGuiConstants.TEXTURE_ONOFFSWITCH_DEFAULT_NORMAL_OFF,
                 HighlightCheckedTexture = MyGuiConstants.TEXTURE_ONOFFSWITCH_DEFAULT_HIGHLIGHT_ON,
                 HighlightUncheckedTexture = MyGuiConstants.TEXTURE_ONOFFSWITCH_DEFAULT_HIGHLIGHT_OFF,
-                SizeOverride = MyGuiConstants.TEXTURE_CHECKBOX_DEFAULT_NORMAL_UNCHECKED.MinSizeGui * new Vector2(1.5f, 1f),
             };
         }
 
