@@ -57,7 +57,7 @@ namespace Sandbox.Graphics.GUI
             switch (layout)
             {
                 case MyGuiControlBlockPropertyLayoutEnum.Horizontal:                    
-                    MinSize = new Vector2(m_propertyControl.Size.X + m_title.Size.X * 1.1f, Math.Max(m_propertyControl.Size.Y, 2.1f * titleHeight));
+                    MinSize = new Vector2(m_propertyControl.Size.X + m_title.Size.X * 1.05f, Math.Max(m_propertyControl.Size.Y, 2.1f * titleHeight));
                     Size = MinSize;
 
                     m_title.OriginAlign = MyGuiDrawAlignEnum.HORISONTAL_LEFT_AND_VERTICAL_TOP;

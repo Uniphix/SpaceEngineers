@@ -41,7 +41,7 @@ namespace Sandbox.Game.Gui
 
         protected override MyGuiControlBase CreateGui()
         {
-            m_checkbox = new MyGuiControlCheckbox(toolTip: MyTexts.GetString(Tooltip) + " - " + (FirstBlock != null ?  (Getter(FirstBlock) ? OnText : OffText) : OffText), visualStyle: Common.ObjectBuilders.Gui.MyGuiControlCheckboxStyleEnum.SliderOnOff, originAlign: MyGuiDrawAlignEnum.HORISONTAL_RIGHT_AND_VERTICAL_CENTER);
+            m_checkbox = new MyGuiControlCheckbox(toolTip: MyTexts.GetString(Tooltip) + " - " + OffText, visualStyle: Common.ObjectBuilders.Gui.MyGuiControlCheckboxStyleEnum.Small, originAlign: MyGuiDrawAlignEnum.HORISONTAL_RIGHT_AND_VERTICAL_CENTER);
 //            m_checkbox.Size = new Vector2(PREFERRED_CONTROL_WIDTH, m_checkbox.Size.Y);
             m_checkboxClicked = OnCheckboxClicked;
             m_checkbox.IsCheckedChanged = m_checkboxClicked;            

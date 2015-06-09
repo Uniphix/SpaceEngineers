@@ -14,6 +14,7 @@ namespace Sandbox.Common.ObjectBuilders.Gui
         Repeat,
         Slave,
         SliderOnOff,
+        Small,
     }
 
     [ProtoContract]

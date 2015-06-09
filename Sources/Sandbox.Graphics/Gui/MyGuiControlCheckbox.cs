@@ -80,6 +80,14 @@ namespace Sandbox.Graphics.GUI
                 HighlightCheckedTexture = MyGuiConstants.TEXTURE_ONOFFSWITCH_DEFAULT_HIGHLIGHT_ON,
                 HighlightUncheckedTexture = MyGuiConstants.TEXTURE_ONOFFSWITCH_DEFAULT_HIGHLIGHT_OFF,
             };
+            m_styles[(int)MyGuiControlCheckboxStyleEnum.Small] = new StyleDefinition()
+            {
+                NormalCheckedTexture = new MyGuiCompositeTexture() { Center = MyGuiConstants.TEXTURE_CHECKBOX_DEFAULT_NORMAL_CHECKED.LeftTop },
+                NormalUncheckedTexture = new MyGuiCompositeTexture() { Center = MyGuiConstants.TEXTURE_CHECKBOX_DEFAULT_NORMAL_UNCHECKED.LeftTop },
+                HighlightCheckedTexture = new MyGuiCompositeTexture() { Center = MyGuiConstants.TEXTURE_CHECKBOX_DEFAULT_HIGHLIGHT_CHECKED.LeftTop },
+                HighlightUncheckedTexture = new MyGuiCompositeTexture() { Center = MyGuiConstants.TEXTURE_CHECKBOX_DEFAULT_HIGHLIGHT_UNCHECKED.LeftTop },
+                SizeOverride = MyGuiConstants.TEXTURE_CHECKBOX_DEFAULT_NORMAL_UNCHECKED.MinSizeGui * 0.6f,
+            };
         }
 
         public static StyleDefinition GetVisualStyle(MyGuiControlCheckboxStyleEnum style)
