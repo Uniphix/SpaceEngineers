@@ -480,9 +480,11 @@ namespace Sandbox.Game.Entities.Blocks
             {
                 if (copy)
                 {
+                    /* don't copy projected grid, to avoid recursive projections
                     var clone = (MyObjectBuilder_CubeGrid)m_originalGridBuilder.Clone();
                     MyEntities.RemapObjectBuilder(clone);
                     objectBuilder.ProjectedGrid = clone;
+                    */
                 }
                 else
                 {

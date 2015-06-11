@@ -28,5 +28,12 @@ namespace Sandbox.Common.ObjectBuilders
                 ProjectedGrid.Remap(remapHelper);
             }
         }
+
+        public override void SetupForProjector()
+        {
+            // projectors in projected grid should not contain any grid
+            ProjectedGrid = null;
+            base.SetupForProjector();
+        }
     }
 }
