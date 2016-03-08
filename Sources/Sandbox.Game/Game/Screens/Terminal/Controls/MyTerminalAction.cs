@@ -119,6 +119,9 @@ namespace Sandbox.Game.Gui
 
         public void Apply(MyTerminalBlock block, ListReader<TerminalActionParameter> parameters)
         {
+            if (block.GetPlayerRelationToOwner() != VRage.Game.MyRelationsBetweenPlayerAndBlock.Owner && block.GetPlayerRelationToOwner() != VRage.Game.MyRelationsBetweenPlayerAndBlock.FactionShare)
+                return;
+
             var b = (TBlock)block;
             if (Enabled(b))
                 m_actionWithParameters(b, parameters);
@@ -126,6 +129,9 @@ namespace Sandbox.Game.Gui
         
         public void Apply(MyTerminalBlock block)
         {
+            if (block.GetPlayerRelationToOwner() != VRage.Game.MyRelationsBetweenPlayerAndBlock.Owner && block.GetPlayerRelationToOwner() != VRage.Game.MyRelationsBetweenPlayerAndBlock.FactionShare)
+                return;
+
             var b = (TBlock)block;
             if (Enabled(b))
                 m_action(b);

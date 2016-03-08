@@ -57,6 +57,9 @@ namespace Sandbox.Game.Screens.Terminal.Controls
 
         public virtual void SetValue(TBlock block, TValue value)
         {
+            if (block.GetPlayerRelationToOwner() != VRage.Game.MyRelationsBetweenPlayerAndBlock.Owner && block.GetPlayerRelationToOwner() != VRage.Game.MyRelationsBetweenPlayerAndBlock.FactionShare)
+                return;
+
             Setter(block, value);
             block.NotifyTerminalValueChanged(this);
         }

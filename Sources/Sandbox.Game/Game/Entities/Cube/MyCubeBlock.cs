@@ -128,6 +128,23 @@ namespace Sandbox.Game.Entities
             return true;
         }
 
+        /// <summary>
+        /// Whether block can be control other block
+        /// </summary>
+        public bool CanControlBlock(MyCubeBlock block)
+        {
+            // same owner can control
+            if (OwnerId == block.OwnerId)
+                return true;
+
+            // check if controler block is in sharemode - this is not required
+            // if (GetUserRelationToOwner(block.OwnerId) == VRage.Game.MyRelationsBetweenPlayerAndBlock.FactionShare) return true;
+            // check if controlled block is in sharemode
+            if (block.GetUserRelationToOwner(OwnerId) == VRage.Game.MyRelationsBetweenPlayerAndBlock.FactionShare) return true;
+
+            return false;
+        }
+
         public bool MarkedToExplode = false;
         public int HackAttemptTime = 0;
         public bool IsBeingHacked
