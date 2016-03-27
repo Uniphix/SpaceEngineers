@@ -88,6 +88,20 @@ namespace Sandbox.Engine.Utils
             }
         }
 
+        protected Vector3I GetParameterValueVector3I(string parameterName, Vector3I defaultval)
+        {
+            var parts = GetParameterValue(parameterName).Split(new char[] { ',', ' ' }, StringSplitOptions.RemoveEmptyEntries);
+            int x, y, z;
+            if (parts.Length == 3 && int.TryParse(parts[0], out x) && int.TryParse(parts[1], out y) && int.TryParse(parts[2], out z))
+            {
+                return new Vector3I(x, y, z);
+            }
+            else
+            {
+                return defaultval;
+            }
+        }
+
         //  Change parameter's value in memory. It doesn't matter if this parameter was loaded. If was, it will be overwritten. If wasn't loaded, we will just set it.
         protected void SetParameterValue(string parameterName, string value)
         {

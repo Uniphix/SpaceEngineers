@@ -98,6 +98,9 @@ namespace Sandbox.Engine.Utils
         readonly string MUTED_PLAYERS = "MutedPlayers";
         readonly string DONT_SEND_VOICE_PLAYERS = "DontSendVoicePlayers";
         readonly string LOW_MEM_SWITCH_TO_LOW = "LowMemSwitchToLow";
+        readonly string CHAT_COLOR1 = "ChatColor1";
+        readonly string CHAT_COLOR2 = "ChatColor2";
+        readonly string CHAT_COLOR3 = "ChatColor3";
 
         public enum LowMemSwitch
         {
@@ -925,8 +928,26 @@ namespace Sandbox.Engine.Utils
             Dx9RenderQuality = MyRenderQualityEnum.LOW;
             VoxelQuality = MyRenderQualityEnum.LOW;
         }
+        // chat colors
+        public Vector3I ChatColor1
+        {
+            get { return GetParameterValueVector3I(CHAT_COLOR1, new Vector3I(255, 255, 255)); }
+            set { SetParameterValue(CHAT_COLOR1, value); }
+        }
 
-        
+        public Vector3I ChatColor2
+        {
+            get { return GetParameterValueVector3I(CHAT_COLOR2, new Vector3I(255, 255, 255)); }
+            set { SetParameterValue(CHAT_COLOR2, value); }
+        }
+
+        public Vector3I ChatColor3
+        {
+            get { return GetParameterValueVector3I(CHAT_COLOR3, new Vector3I(255,255,255)); }
+            set { SetParameterValue(CHAT_COLOR3, value); }
+        }
+
+
         #region ModAPI
         MyTextureAnisoFiltering? ModAPI.IMyConfig.AnisotropicFiltering
         {
