@@ -34,6 +34,11 @@ using VRage.Utils;
         public static readonly MyStringId ScreenCaptionAudioOptions = MyStringId.GetOrCompute("ScreenCaptionAudioOptions");
 
         ///<summary>
+        ///Chat options
+        ///</summary>
+        public static readonly MyStringId ScreenCaptionChatOptions = MyStringId.GetOrCompute("ScreenCaptionChatOptions");
+
+        ///<summary>
         ///Cancel
         ///</summary>
         public static readonly MyStringId Cancel = MyStringId.GetOrCompute("Cancel");
@@ -1457,6 +1462,11 @@ using VRage.Utils;
         ///Controls
         ///</summary>
         public static readonly MyStringId ScreenOptionsButtonControls = MyStringId.GetOrCompute("ScreenOptionsButtonControls");
+
+        ///<summary>
+        ///Chat
+        ///</summary>
+        public static readonly MyStringId ScreenOptionsButtonChat = MyStringId.GetOrCompute("ScreenOptionsButtonChat");
 
         ///<summary>
         ///RESET CONTROLS

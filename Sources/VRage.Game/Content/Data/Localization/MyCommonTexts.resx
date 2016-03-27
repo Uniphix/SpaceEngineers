@@ -132,6 +132,9 @@
   <data name="ScreenCaptionAudioOptions" xml:space="preserve">
     <value>Audio options</value>
   </data>
+  <data name="ScreenCaptionChatOptions" xml:space="preserve">
+    <value>Chat options</value>
+  </data>
   <data name="Cancel" xml:space="preserve">
     <value>Cancel</value>
   </data>
@@ -993,6 +996,9 @@ Note that by submitting this item, you agree to the workshop terms of service (s
   </data>
   <data name="ScreenOptionsButtonControls" xml:space="preserve">
     <value>Controls</value>
+  </data>
+  <data name="ScreenOptionsButtonChat" xml:space="preserve">
+    <value>Chat</value>
   </data>
   <data name="MessageBoxCaptionResetControlsToDefault" xml:space="preserve">
     <value>RESET CONTROLS</value>

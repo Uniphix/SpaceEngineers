@@ -13,7 +13,7 @@ namespace SpaceEngineers.Game.GUI
     class MyGuiScreenOptionsSpace : MyGuiScreenBase
     {
         public MyGuiScreenOptionsSpace()
-            : base(new Vector2(0.5f, 0.5f), MyGuiConstants.SCREEN_BACKGROUND_COLOR, new Vector2(574f / 1600f, 570 / 1200f), false, null)
+            : base(new Vector2(0.5f, 0.5f), MyGuiConstants.SCREEN_BACKGROUND_COLOR, new Vector2(574f, 670f) / MyGuiConstants.GUI_OPTIMAL_SIZE, false, null)
         {
             EnabledBackgroundFade = true;
 
@@ -70,6 +70,11 @@ namespace SpaceEngineers.Game.GUI
                 text: MyTexts.Get(MyCommonTexts.ScreenOptionsButtonControls),
                 onButtonClick: OnControlsClick));
 
+            Controls.Add(new MyGuiControlButton(
+                position: menuPositionOrigin + index++ * MyGuiConstants.MENU_BUTTONS_POSITION_DELTA,
+                text: MyTexts.Get(MyCommonTexts.ScreenOptionsButtonChat),
+                onButtonClick: OnChatClick));
+
             CloseButtonEnabled = true;
         }
 
@@ -100,6 +105,11 @@ namespace SpaceEngineers.Game.GUI
         public void OnControlsClick(MyGuiControlButton sender)
         {
             MyGuiSandbox.AddScreen(new MyGuiScreenOptionsControls());
+        }
+
+        public void OnChatClick(MyGuiControlButton sender)
+        {
+            MyGuiSandbox.AddScreen(new MyGuiScreenOptionsChat());
         }
 
         public void OnBackClick(MyGuiControlButton sender)
