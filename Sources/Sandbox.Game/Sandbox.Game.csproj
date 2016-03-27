@@ -794,6 +794,7 @@
     <Compile Include="Game\Screens\Helpers\MyToolbarItemConsumable.cs" />
     <Compile Include="Game\Screens\MyGuiScreenAdvancedScenarioSettings.cs" />
     <Compile Include="Game\Screens\MyGuiScreenBriefing.cs" />
+    <Compile Include="Game\Screens\MyGuiScreenSimpleColorPicker.cs" />
     <Compile Include="Game\Screens\MyGuiScreenMission.cs" />
     <Compile Include="Game\Screens\MyGuiScreenScenarioBase.cs" />
     <Compile Include="Game\Screens\MyGuiScreenScenarioMpClient.cs" />
