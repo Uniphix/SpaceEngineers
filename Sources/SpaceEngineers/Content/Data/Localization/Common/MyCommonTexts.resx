@@ -132,9 +132,6 @@
   <data name="ScreenCaptionAudioOptions" xml:space="preserve">
     <value>Audio options</value>
   </data>
-  <data name="ScreenCaptionChatOptions" xml:space="preserve">
-    <value>Chat options</value>
-  </data>
   <data name="Cancel" xml:space="preserve">
     <value>Cancel</value>
   </data>
@@ -996,9 +993,6 @@ Note that by submitting this item, you agree to the workshop terms of service (s
   </data>
   <data name="ScreenOptionsButtonControls" xml:space="preserve">
     <value>Controls</value>
-  </data>
-  <data name="ScreenOptionsButtonChat" xml:space="preserve">
-    <value>Chat</value>
   </data>
   <data name="MessageBoxCaptionResetControlsToDefault" xml:space="preserve">
     <value>RESET CONTROLS</value>
@@ -2373,5 +2367,38 @@ Do you want to continue?</value>
   </data>
   <data name="MuteWhenNotInFocus" xml:space="preserve">
     <value>Mute when inactive</value>
+  </data>
+  <data name="ScreenCaptionChatOptions" xml:space="preserve">
+    <value>Chat options</value>
+  </data>
+  <data name="ScreenOptionsButtonChat" xml:space="preserve">
+    <value>Chat</value>
+  </data>
+  <data name="ChatTextColor1" xml:space="preserve">
+    <value>ChatText Color1</value>
+  </data>
+  <data name="ChatTextColor2" xml:space="preserve">
+    <value>ChatText Color2</value>
+  </data>
+  <data name="ChatTextColor3" xml:space="preserve">
+    <value>ChatText Color3</value>
+  </data>
+  <data name="ColorHue" xml:space="preserve">
+    <value>Hue</value>
+  </data>
+  <data name="ColorSaturation" xml:space="preserve">
+    <value>Saturation</value>
+  </data>
+  <data name="ColorValue" xml:space="preserve">
+    <value>Value</value>
+  </data>
+  <data name="ButtonReset" xml:space="preserve">
+    <value>Reset</value>
+  </data>
+  <data name="ButtonOK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="ButtonCancel" xml:space="preserve">
+    <value>Cancel</value>
   </data>
 </root>

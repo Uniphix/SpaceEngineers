@@ -34,11 +34,6 @@ using VRage.Utils;
         public static readonly MyStringId ScreenCaptionAudioOptions = MyStringId.GetOrCompute("ScreenCaptionAudioOptions");
 
         ///<summary>
-        ///Chat options
-        ///</summary>
-        public static readonly MyStringId ScreenCaptionChatOptions = MyStringId.GetOrCompute("ScreenCaptionChatOptions");
-
-        ///<summary>
         ///Cancel
         ///</summary>
         public static readonly MyStringId Cancel = MyStringId.GetOrCompute("Cancel");
@@ -1462,11 +1457,6 @@ using VRage.Utils;
         ///Controls
         ///</summary>
         public static readonly MyStringId ScreenOptionsButtonControls = MyStringId.GetOrCompute("ScreenOptionsButtonControls");
-
-        ///<summary>
-        ///Chat
-        ///</summary>
-        public static readonly MyStringId ScreenOptionsButtonChat = MyStringId.GetOrCompute("ScreenOptionsButtonChat");
 
         ///<summary>
         ///RESET CONTROLS
@@ -3742,4 +3732,59 @@ using VRage.Utils;
         ///Mute when inactive
         ///</summary>
         public static readonly MyStringId MuteWhenNotInFocus = MyStringId.GetOrCompute("MuteWhenNotInFocus");
+
+        ///<summary>
+        ///Chat options
+        ///</summary>
+        public static readonly MyStringId ScreenCaptionChatOptions = MyStringId.GetOrCompute("ScreenCaptionChatOptions");
+
+        ///<summary>
+        ///Chat
+        ///</summary>
+        public static readonly MyStringId ScreenOptionsButtonChat = MyStringId.GetOrCompute("ScreenOptionsButtonChat");
+
+        ///<summary>
+        ///ChatText Color1
+        ///</summary>
+        public static readonly MyStringId ChatTextColor1 = MyStringId.GetOrCompute("ChatTextColor1");
+
+        ///<summary>
+        ///ChatText Color2
+        ///</summary>
+        public static readonly MyStringId ChatTextColor2 = MyStringId.GetOrCompute("ChatTextColor2");
+
+        ///<summary>
+        ///ChatText Color3
+        ///</summary>
+        public static readonly MyStringId ChatTextColor3 = MyStringId.GetOrCompute("ChatTextColor3");
+
+        ///<summary>
+        ///Hue
+        ///</summary>
+        public static readonly MyStringId ColorHue = MyStringId.GetOrCompute("ColorHue");
+
+        ///<summary>
+        ///Saturation
+        ///</summary>
+        public static readonly MyStringId ColorSaturation = MyStringId.GetOrCompute("ColorSaturation");
+
+        ///<summary>
+        ///Value
+        ///</summary>
+        public static readonly MyStringId ColorValue = MyStringId.GetOrCompute("ColorValue");
+
+        ///<summary>
+        ///Reset
+        ///</summary>
+        public static readonly MyStringId ButtonReset = MyStringId.GetOrCompute("ButtonReset");
+
+        ///<summary>
+        ///OK
+        ///</summary>
+        public static readonly MyStringId ButtonOK = MyStringId.GetOrCompute("ButtonOK");
+
+        ///<summary>
+        ///Cancel
+        ///</summary>
+        public static readonly MyStringId ButtonCancel = MyStringId.GetOrCompute("ButtonCancel");
     }
